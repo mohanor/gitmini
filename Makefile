@@ -11,6 +11,7 @@ SRC = libft/ft_strdup.c libft/ft_strjoin.c  libft/ft_strlen.c  libft/ft_split.c 
 	minishell.c \
 	src/syntaxe1_error.c src/syntaxe2_error.c src/disperse_cmd.c  src/utils.c src/utils_2.c src/pipe_cmd.c src/make_env.c\
 	src/utils_disperse_cmd.c src/expend_herdog.c src/red_cmd.c src/herdog_utils.c \
+	src/lst_pid.c
 
 
 OBJ = $(SRC:.c=.o)

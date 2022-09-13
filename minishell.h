@@ -99,6 +99,10 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(char *content, int flag);
 
+//pid lst
+t_pid	*ft_lstnew_pid(int id);
+t_pid	*ft_lstlast_pid(t_pid *lst);
+void	ft_lstadd_back_pid(t_pid **lst, t_pid *new);
 
 // libft
 char	*ft_substr(char const *s, unsigned int start, size_t len);

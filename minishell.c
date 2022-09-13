@@ -6,7 +6,7 @@
 /*   By: matef <matef@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 22:33:42 by mjalloul          #+#    #+#             */
-/*   Updated: 2022/09/13 23:02:09 by matef            ###   ########.fr       */
+/*   Updated: 2022/09/13 23:44:19 by matef            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ int main(int argc, char **argv, char **env)
     envr = make_env(env);
     
     fd[0] = dup(0);
-    fd[1] = dup(1);
+    
     while(1)
     {
         dup2(fd[0], 0);
-        dup2(fd[1], 1);
+        
         line = readline("Minishell> ");// free leaks
         if(*line)
         {
@@ -45,5 +45,5 @@ int main(int argc, char **argv, char **env)
     }
 
     close(fd[0]);
-    close(fd[1]);
+    
 }
